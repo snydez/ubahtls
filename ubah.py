@@ -22,6 +22,7 @@ def posisikonsonan(strKata, intPos):
 
 
 def ubahhuruf(strKata, posisiHuruf, jadiHuruf):
+    #pecah kata jadi perhuruf
     pecahHuruf = list(strKata)
     pecahHuruf[posisiHuruf] = jadiHuruf
 
@@ -29,6 +30,7 @@ def ubahhuruf(strKata, posisiHuruf, jadiHuruf):
 
 
 def tukarHurufdariKata(kata1,kata2, arah):
+    #tukar huruf dari masing masing kata
     if arah=="2ke1":
         #tukar kata
         katax = kata1
@@ -55,30 +57,6 @@ def tukarHurufdariKata(kata1,kata2, arah):
             hasilubahkata = kata2
 
     return hasilubahkata
-
-
-def tukarHurufKata1ke2(kata1, kata2):
-    #ambil konsonan ke 2 dari kata1     tukar dng konsonan pertama dari kata2
-
-    poskonsKata1 = posisikonsonan(kata1, 2)
-    poskonsKata2 = posisikonsonan(kata2, 1)
-    hasilubahkata1 = ""
-    try:
-        hasilubahkata1 = ubahhuruf(kata1, poskonsKata1, kata2[poskonsKata2])
-    except:
-        print(kata1 + "; " + kata2 + "; poskonsKata1 =" + str(poskonsKata1) + "; poskonsKata2 = " + str(poskonsKata2))
-
-    return hasilubahkata1
-
-
-def tukarHurufKata2ke1(kata2, kata1):
-    #ambil konsonan ke 1 dari kata2     tukar dng konsonan ke 2 dari kata1
-
-    poskonsKata1 = posisikonsonan(kata1, 2)
-    poskonsKata2 = posisikonsonan(kata2, 1)
-    hasilubahkata2 = ubahhuruf(kata2, poskonsKata2, kata1[poskonsKata1])
-
-    return hasilubahkata2
 
 
 untukdiubah = list("")
@@ -114,11 +92,6 @@ while True:
     else:
         strKata2 = potong[n+1]
 
-
-#kataterganti.append(katakedua)
-#strKkata1 = katakedua
-#katakedua = tukarHurufKata2ke1(strKata2, strKata1)
 kataterganti.append(katakedua)
-
 kalimatterganti = " ".join(kataterganti)
 print(kalimatterganti)
