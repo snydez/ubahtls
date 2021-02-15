@@ -1,6 +1,8 @@
 # ubahtls
 
-tools kecil untuk mengubah kalimat menjadi agak terscramble.
+**ubahtls** is a tiny tools to scramble text developed using pyhton3.
 
-### catatan
-unreversable
+README in [bahasa indonesia](./README.id.md), [english](./README.md).
+
+### note
+the text that has been scrambled is reversible.

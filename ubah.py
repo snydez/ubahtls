@@ -60,8 +60,8 @@ def tukarHurufdariKata(kata1,kata2, arah):
 
 
 untukdiubah = list("")
-
-tulisan = "kyu belajar saya mateamtika dengan. wiro geni, mental gedebrug kiri! setoppp"
+f = open("untukdiubah.txt","r")
+tulisan = f.read()
 
 potong = tulisan.split(" ")
 
@@ -94,4 +94,9 @@ while True:
 
 kataterganti.append(katakedua)
 kalimatterganti = " ".join(kataterganti)
+
 print(kalimatterganti)
+
+fw = open("hasilubah.txt","w")
+fw.write(kalimatterganti)
+fw.close()
